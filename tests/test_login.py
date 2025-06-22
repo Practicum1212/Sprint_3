@@ -15,8 +15,6 @@ class TestStellarBurgersLoginLogoutForm:
         order_button = driver.find_element(*MainPage.mn_order_button)
         assert driver.current_url == Urls.url_main_paige and order_button.text == 'Оформить заказ'
 
-        driver.quit()
-
     def test_login_sign_in_button_show_login_page(self, driver):
         """ Проверка входа через кноку 'Войти в аккаунт' """
 
@@ -32,8 +30,6 @@ class TestStellarBurgersLoginLogoutForm:
         order_button = driver.find_element(*MainPage.mn_order_button)
         assert driver.current_url == Urls.url_main_paige and order_button.text == 'Оформить заказ'
 
-        driver.quit()
-
     def test_login_personal_account_button_show_login_page(self, driver):
         """ Проверка входа через кнопку 'Личный Кабинет' """
 
@@ -48,11 +44,6 @@ class TestStellarBurgersLoginLogoutForm:
 
         order_button = driver.find_element(*MainPage.mn_order_button)
         assert driver.current_url == Urls.url_main_paige and order_button.text == 'Оформить заказ'
-
-        driver.quit()
-
-
-
 
     def test_login_registration_form_sign_in_button(self, driver):
         """ Проверка входа через кнопку 'Войти' в форме регистрации """
@@ -70,8 +61,6 @@ class TestStellarBurgersLoginLogoutForm:
         order_button = driver.find_element(*MainPage.mn_order_button)
         assert driver.current_url == Urls.url_main_paige and order_button.text == 'Оформить заказ'
 
-        driver.quit()
-
     def test_login_forgot_password_form_sign_in_button(self, driver):
         """ Проверка входа через кнопку 'Войти' в форме 'Восстановление пароля' """
         driver.get(Urls.url_forgot_password)
@@ -88,4 +77,3 @@ class TestStellarBurgersLoginLogoutForm:
         order_button = driver.find_element(*MainPage.mn_order_button)
         assert driver.current_url == Urls.url_main_paige and order_button.text == 'Оформить заказ'
 
-        driver.quit()

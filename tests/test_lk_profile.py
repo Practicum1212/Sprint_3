@@ -17,8 +17,6 @@ class TestStellarBurgersProfileForm:
         profile = driver.find_element(*LKProfile.lk_history_shop_button)
         assert Urls.url_profile == driver.current_url and profile.text == 'История заказов'
 
-        driver.quit()
-
     def test_click_constructor_button_show_constructor_form(self, login):
         """ Переход из личного кабинета в конструктор при нажатии кнопки 'Конструктор' """
         driver = login
@@ -31,8 +29,6 @@ class TestStellarBurgersProfileForm:
         h1_tag = driver.find_elements(By.XPATH, ".//h1")
         assert len(h1_tag) > 0 and h1_tag[0].text == 'Соберите бургер'
 
-        driver.quit()
-
     def test_click_logo_button_show_constructor_form(self, login):
         """ Переход из личного кабинета в конструктор при нажатии на лого """
         driver = login
@@ -44,8 +40,6 @@ class TestStellarBurgersProfileForm:
 
         h1_tag = driver.find_elements(By.XPATH, ".//h1")
         assert len(h1_tag) > 0 and h1_tag[0].text == 'Соберите бургер'
-
-        driver.quit()
 
     def test_click_logout_button_in_lk_open_login_form(self, login):
         """ Выйти из аккаунта """
@@ -60,4 +54,3 @@ class TestStellarBurgersProfileForm:
         login_button = driver.find_element(*AuthLogin.al_element_with_login_text)
         assert driver.current_url == Urls.url_login and login_button.text == 'Вход'
 
-        driver.quit()
